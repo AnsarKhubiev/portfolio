@@ -1,0 +1,21 @@
+.alice-carousel__dots {
+    margin-top: 50px;
+}
+
+
+
+.alice-carousel__dots-item:not(.__custom), .alice-carousel__dots-item:not(.__custom):not(:last-child) {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px 0;
+    border-radius: 5px;
+    background-color: #FFB400;
+    transition: 0.2s ease-in-out;
+}
+
+.alice-carousel__dots-item:not(.__custom).__active {
+    background-color: #FFB400;
+    width: 25px;
+}
+
