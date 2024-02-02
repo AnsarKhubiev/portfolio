@@ -1,11 +1,11 @@
 import React from 'react';
-import {ProfileInfoCard} from "./ProfileCards/ProfileInfoCard";
-import {SkillsCard} from "./ProfileCards/SkillsCard";
-import {ExtraSkillsCard} from "./ProfileCards/ExtraSkillsCard";
-import {ProfileHeaderCard} from "./ProfileCards/ProfileHeaderCard";
+import {CvInfoCard} from "./cvCards/CvInfoCard";
+import {SkillsCard} from "./cvCards/SkillsCard";
+import {ExtraSkillsCard} from "./cvCards/ExtraSkillsCard";
+import {CvHeaderCard} from "./cvCards/CvHeaderCard";
 import {Button} from "../../../components/Button";
 import {Icon} from "../../../components/icon/Icon";
-import {S} from './AsideProfile_Styles'
+import {S} from './AsideCv_Styles'
 
 const languagesItems = {
     title: 'Languages',
@@ -34,14 +34,14 @@ const skillsList = [
     'GIT Knowledge'
 ]
 
-export const AsideProfile: React.FC = () => {
+export const AsideCv: React.FC = () => {
     return (
-        <S.AsideProfile>
+        <S.AsideCv>
 
-            <S.ProfileContainer>
+            <S.CvContainer>
 
-                <ProfileHeaderCard/>
-                <ProfileInfoCard/>
+                <CvHeaderCard/>
+                <CvInfoCard/>
 
                 <SkillsCard skills={languagesItems}/>
                 <SkillsCard skills={skillsItems}/>
@@ -57,9 +57,9 @@ export const AsideProfile: React.FC = () => {
                     />
                 </Button>
 
-            </S.ProfileContainer>
+            </S.CvContainer>
 
-        </S.AsideProfile>
+        </S.AsideCv>
     );
 };
 

@@ -3,23 +3,20 @@ import {theme} from "../../styles/theme";
 import {Link} from 'react-scroll';
 
 const Menu = styled.ul`
+  max-width: 450px;
+  width: 100%;
   display: flex;
-  margin: 0 10px;
   flex-direction: column;
-  gap: 42px;
-  
-  @media ${theme.media.tablet}{
-    gap: 15px;
-  }
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+
 
   @media ${theme.media.mobileLandscape}{
     height: 100%;
-    gap: 0;
     justify-content: space-evenly;
   }
-`
-
-const MenuItem = styled.li`
 `
 
 const NavLink = styled(Link)`
@@ -42,23 +39,15 @@ const NavLink = styled(Link)`
   }
   
   @media ${theme.media.middle}{
-    display: flex;
     justify-content: left;
     gap: 20px;
     padding: 0 10px;
     width: 180px;
-    height: 50px;
-
-    // &:hover, &.active {
-    //   background-color: ${theme.colors.yellow};
-    //   color: ${theme.colors.darkBg};
-    //   transition: transform 0.2s;
-    // }
+    height: 42px;
   }
 `
 
 export const S = {
     Menu,
-    MenuItem,
     NavLink
 }

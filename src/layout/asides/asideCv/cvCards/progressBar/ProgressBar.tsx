@@ -1,5 +1,5 @@
 import React from 'react';
-import {S} from '../../AsideProfile_Styles'
+import {S} from '../../AsideCv_Styles'
 
 export const ProgressBar: React.FC<{ name: string, value: number }> = (props: { name: string, value: number }) => {
     return (

@@ -4,8 +4,7 @@ import {S} from './Footer_Styles'
 
 export const Footer: React.FC = () => {
     return (
-        <S.Footer>
-            <S.FooterContainer>
+            <S.Footer>
                 <S.Copyright>
                     <Icon
                         iconId={'copyright'}
@@ -15,8 +14,7 @@ export const Footer: React.FC = () => {
                     />
                     2021 All Rights Reserved.
                 </S.Copyright>
-            </S.FooterContainer>
-        </S.Footer>
+            </S.Footer>
     );
 };
 

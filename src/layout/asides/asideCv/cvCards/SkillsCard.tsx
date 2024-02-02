@@ -1,6 +1,6 @@
 import React from 'react';
 import {ProgressBar} from "./progressBar/ProgressBar";
-import {S} from '../AsideProfile_Styles'
+import {S} from '../AsideCv_Styles'
 
 type LanguagesPropsType = {
     skills: {

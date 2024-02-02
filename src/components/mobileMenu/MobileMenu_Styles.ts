@@ -1,34 +1,16 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../styles/theme";
-import {Container} from "../../components/Container";
-import {FlexWrapper} from "../../components/FlexWrapper";
 
-const Header = styled.header`
-  grid-area: header;
-  grid-column: 2/3;
-  width: 100%;
-  
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  
-  ${Container} {
-    padding-bottom: 0;
-  }
-`
-
-const HeaderContainer = styled(FlexWrapper)`
-  background-color: ${theme.colors.white};
-  padding: 0 50px;
-  height: 40px;
-  align-items: center;
-  justify-content: space-between;
-`
 
 // ---------MobileMenu--------------
 
-const MobileMenu = styled.div`
-  position: relative;
+const MobileMenu = styled.div<{ isOpen: boolean }>`
+  z-index: ${props => props.isOpen ? 9999 : 999};
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  flex-grow: 1;
+  
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -52,9 +34,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   height: 18px;
   vertical-align: middle;
   position: relative;
-  z-index: 999;
 
   span {
+    margin-left: auto;
     display: block;
     background-color: ${theme.colors.yellow};
     width: 30px;
@@ -89,8 +71,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 export const S = {
-    Header,
-    HeaderContainer,
     MobileMenu,
     BurgerButton,
     MobileMenuPopup

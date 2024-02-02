@@ -1,21 +1,14 @@
 import {theme} from "../../styles/theme";
 import styled from "styled-components";
 import {font} from "../../styles/Common";
-import {Container} from "../../components/Container";
 
 const Footer = styled.footer`
   max-width: 970px;
-  position: relative;
+  margin: 0 auto;
   grid-area: footer;
   grid-column: 2 / 3;
   width: 100%;
-  margin: 0 auto;
   background-color: ${theme.colors.white};
-`
-
-const FooterContainer = styled(Container)`
-
-padding: 0;
 `
 
 const Copyright = styled.footer`
@@ -28,7 +21,6 @@ const Copyright = styled.footer`
 `
 
 export const S = {
-    FooterContainer,
     Footer,
     Copyright
 }

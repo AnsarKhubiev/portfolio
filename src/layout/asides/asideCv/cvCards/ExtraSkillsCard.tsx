@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
-import {S} from '../AsideProfile_Styles'
+import {S} from '../AsideCv_Styles'
 
 
 export const ExtraSkillsCard: React.FC<{ skills: Array<string> }> = (props: { skills: Array<string> }) => {

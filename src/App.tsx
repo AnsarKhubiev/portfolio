@@ -1,8 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
 import {Portfolio} from "./layout/sections/portfolio/Portfolio";
-import {Header} from "./layout/header/Header";
-import {AsideProfile} from "./layout/asides/asideProfile/AsideProfile";
+import {AsideCv} from "./layout/asides/asideCv/AsideCv";
 import {Footer} from "./layout/footer/Footer";
 import {AsideNav} from "./layout/asides/asideNav/AsideNav";
 import {Main} from "./layout/sections/main/Main";
@@ -16,6 +15,8 @@ import {Map} from "./layout/sections/map/Map";
 import {Reviews} from "./layout/sections/recommendations/Reviews";
 import React from "react";
 import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
+import {MobileCv} from "./components/mobileCv/MobileCv";
+import {MobileMenu} from "./components/mobileMenu/MobileMenu";
 
 
 function App() {
@@ -32,8 +33,8 @@ function App() {
     return (
         <div className="App">
             <StyledApp>
-                {width > breakpoint ? <AsideNav/> : ''}
-                {width < breakpoint ? <Header/> : <AsideProfile/>}
+                {width > breakpoint && <AsideNav/>}
+                {width > breakpoint && <AsideCv/>}
                 <ContentWrap>
                     <Main/>
                     <Services/>
@@ -45,10 +46,12 @@ function App() {
                     <Blog/>
                     <Contact/>
                     <Map/>
+                    <Footer/>
                 </ContentWrap>
-                <Footer/>
+                {width < breakpoint && <MobileMenu/>}
+                {width < breakpoint && <MobileCv/>}
+                <GoTopBtn/>
             </StyledApp>
-            <GoTopBtn/>
         </div>
     );
 }
@@ -62,11 +65,8 @@ const StyledApp = styled.div`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: 
-          'header header header'
-          'profile content nav'
-          'footer footer footer';
+  grid-template-rows: auto;
+  grid-template-areas:'cv content nav';
 `
 
 const ContentWrap = styled.div`

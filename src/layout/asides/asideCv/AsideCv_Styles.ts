@@ -7,9 +7,9 @@ import {font} from "../../../styles/Common";
 import {Container} from "../../../components/Container";
 
 
-const AsideProfile = styled.aside`
+const AsideCv = styled.aside`
   position: relative;
-  grid-area: profile;
+  grid-area: cv;
   height: max-content;
   width: 304px;
   background-color: ${theme.colors.white};
@@ -32,9 +32,9 @@ const AsideProfile = styled.aside`
 ;;
 `
 
-// ---------ProfileContainer--------------
+// ---------CvContainer--------------
 
-const ProfileContainer = styled(Container)`
+const CvContainer = styled(Container)`
 padding: 25px 40px;
 `
 
@@ -54,9 +54,9 @@ const CardContainer = styled.div`
   }
 `
 
-// ---------Profile Header--------------
+// ---------Cv Header--------------
 
-const ProfileHeaderCard = styled.div`
+const CvHeaderCard = styled.div`
   ${CardContainer} {
     display: flex;
     flex-direction: column;
@@ -81,9 +81,9 @@ const Specialty = styled.span`
 `
 
 
-// ---------ProfileInfoCard--------------
+// ---------CvInfoCard--------------
 
-const ProfileInfoBlock = styled.table`
+const CvInfoBlock = styled.table`
   ${font({color: theme.colors.black, lineHeight: 1.6, Fmax: 15, Fmin: 15})};
   border-collapse: collapse;
   position: relative;
@@ -242,13 +242,13 @@ const Link = styled.a`
 
 
 export const S = {
-    ProfileContainer,
-    AsideProfile,
-    ProfileHeaderCard,
+    CvContainer,
+    AsideCv,
+    CvHeaderCard,
     Name,
     Avatar,
     Specialty,
-    ProfileInfoBlock,
+    CvInfoBlock,
     TableHeader,
     SkillsCard,
     SkillsTitle,

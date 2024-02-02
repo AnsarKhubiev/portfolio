@@ -18,18 +18,17 @@ export const Menu: React.FC<{isMobileMenu?: boolean}> = (props: {isMobileMenu?: 
 
         <S.Menu role={'menu'} tabIndex={0}>
             {navItems.map((item, index) => (
-                <S.MenuItem role={"menuitem"} key={index}>
+                <li role={"menuitem"} key={index}>
                     <S.NavLink
                         activeClass="active"
                         to={item.href}
                         smooth={true}
                         spy={true}
-                        offset={-50}
                     >
                         <Icon iconId={item.iconId}/>
                         {props.isMobileMenu && item.title}
                     </S.NavLink>
-                </S.MenuItem>
+                </li>
             ))}
 
         </S.Menu>

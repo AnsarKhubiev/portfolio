@@ -28,7 +28,7 @@ export const InfoCard:React.FC<ContactInfoCardPropsType> = (props: ContactInfoCa
                     {props.contactItems.listItems.map((item, index) => (
                         <tr key={index}>
                             <th>{item.name}:</th>
-                            <td>{item.value}:</td>
+                            <td>{item.value}</td>
                         </tr>
                     ))}
                 </S.ContactInfo>

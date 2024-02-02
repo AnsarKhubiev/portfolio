@@ -1,9 +1,9 @@
 import React from 'react';
-import {S} from '../AsideProfile_Styles'
+import {S} from '../AsideCv_Styles'
 
-export const ProfileInfoCard: React.FC = () => {
+export const CvInfoCard: React.FC = () => {
     return (
-        <S.ProfileInfoBlock>
+        <S.CvInfoBlock>
             <S.CardContainer>
                 <tr>
                     <th><S.TableHeader>Age:</S.TableHeader></th>
@@ -22,7 +22,7 @@ export const ProfileInfoCard: React.FC = () => {
                     <td>Dhaka,Bangladesh</td>
                 </tr>
             </S.CardContainer>
-        </S.ProfileInfoBlock>
+        </S.CvInfoBlock>
     );
 };
 
