@@ -10,29 +10,26 @@ type ContactInfoCardPropsType = {
     }
 }
 
-export const InfoCard:React.FC<ContactInfoCardPropsType> = (props: ContactInfoCardPropsType) => {
+export const InfoCard: React.FC<ContactInfoCardPropsType> = (props: ContactInfoCardPropsType) => {
     return (
         <S.ContactInfoCard>
-
-                <S.IconBg>
-                    <Icon
-                        iconId={props.contactItems.iconId}
-                        color={theme.colors.black}
-                        width={'18'}
-                        height={'18'}
-                        viewBox={'0 0 18 18'}
-                    />
-                </S.IconBg>
-
-                <S.ContactInfo>
-                    {props.contactItems.listItems.map((item, index) => (
-                        <tr key={index}>
-                            <th>{item.name}:</th>
-                            <td>{item.value}</td>
-                        </tr>
-                    ))}
-                </S.ContactInfo>
-
+            <S.IconBg>
+                <Icon
+                    iconId={props.contactItems.iconId}
+                    color={theme.colors.black}
+                    width={'18'}
+                    height={'18'}
+                    viewBox={'0 0 18 18'}
+                />
+            </S.IconBg>
+            {props.contactItems.listItems.map((item) => {
+                return (
+                    <>
+                        <S.ContactLabel>{item.name}:</S.ContactLabel>
+                        <S.ContactValue>{item.value}</S.ContactValue>
+                    </>
+                )
+            })}
         </S.ContactInfoCard>
-    );
+    )
 };

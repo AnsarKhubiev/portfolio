@@ -5,6 +5,7 @@ import {theme} from "../../../styles/theme";
 import {font} from "../../../styles/Common";
 import {Container} from "../../../components/Container";
 
+
 const Contacts = styled.section`
   position: relative;
 
@@ -25,7 +26,7 @@ const FormTitle = styled(SectionTitle)`
 `
 
 const InfoCardsBlock = styled.div`
-  max-width: 370px;
+  max-width: 700px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -37,6 +38,7 @@ const CardsWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 18px;
 `
 
 const Form = styled.form`
@@ -70,38 +72,36 @@ const SendBtn = styled(Button)`
 
 const ContactInfoCard = styled.div`
   background-color: ${theme.colors.white};
-  padding: 25px 25px 16px;
+  padding: 25px 25px 15px;
+  
+  display: grid;
+  grid-template: repeat(4, auto) / repeat(2, auto);
+  grid-gap: 14px;
 `
+
 const IconBg = styled.span`
+  grid-area: 1/1/1/3;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  margin: 0 auto 31px;
+  margin: 0 auto 16px;
   border-radius: 20px;
   background-color: ${theme.colors.yellow};
 `
 
-const ContactInfo = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-
-  th {
+const ContactLabel = styled.span`
   ${font({lineHeight: 1.236, weight:500, Fmax:18, Fmin:18})};
-    text-align: left;
-  }
-  
-  tr:nth-child(2) th {
-    padding: 16px 0 16px;
-  };
-  
-  td {
-    text-align: right;
-    font-size: 15px;
-    line-height: 24px;
-  };
+  white-space: nowrap;
 `
+
+const ContactValue = styled.span`
+  text-align: right;
+  ${font({lineHeight: 1.6, Fmax:15, Fmin:15})};
+  white-space: nowrap;
+`
+
 
 export const S = {
     Contacts,
@@ -113,5 +113,6 @@ export const S = {
     SendBtn,
     ContactInfoCard,
     IconBg,
-    ContactInfo
+    ContactValue,
+    ContactLabel
 }
