@@ -18,7 +18,6 @@ const PostCard = styled.div`
   display: flex;
   flex-direction: column;
   user-select: none;
-  cursor: grab;
   
   background-color: ${theme.colors.white};
   
@@ -26,6 +25,7 @@ const PostCard = styled.div`
     max-width: 310px;
     width: 100%;
     align-self: center;
+    pointer-events: none;
   }
 `
 

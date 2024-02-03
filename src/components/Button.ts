@@ -13,8 +13,4 @@ export const Button = styled.button`
   color: ${theme.colors.black};
   font-family: Inter, sans-serif;
   transition: ${theme.animations.transition};
-
-  svg {
-    transition: ${theme.animations.transition};
-  }
 `

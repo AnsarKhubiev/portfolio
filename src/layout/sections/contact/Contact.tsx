@@ -34,11 +34,13 @@ const phones = {
 
 export const Contact: React.FC = () => {
     return (
-        <S.Contacts id={'contact'}>
-            <Container>
+        <Container>
+            <S.Contacts id={'contact'}>
+
                 <S.FormWrap>
 
                     <S.FormTitle>Leave us your info</S.FormTitle>
+
                     <S.Form action="" method={''}>
                         <FieldWrap id={'userName'} labelText={'Your Full Name ( Required)'}/>
                         <FieldWrap id={'userEmail'} labelText={'Your Email ( Required)'} type={'email'}/>
@@ -50,18 +52,13 @@ export const Contact: React.FC = () => {
                 </S.FormWrap>
 
                 <S.InfoCardsBlock>
-
                     <S.FormTitle>Contact information</S.FormTitle>
-                    <S.CardsWrap>
-                        <InfoCard contactItems={address}/>
-                        <InfoCard contactItems={messengers}/>
-                        <InfoCard contactItems={phones}/>
-                    </S.CardsWrap>
-
+                    <InfoCard contactItems={address}/>
+                    <InfoCard contactItems={messengers}/>
+                    <InfoCard contactItems={phones}/>
                 </S.InfoCardsBlock>
-            </Container>
 
-
-        </S.Contacts>
+            </S.Contacts>
+        </Container>
     );
 };

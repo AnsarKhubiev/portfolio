@@ -18,7 +18,6 @@ const Slide = styled.div`
   padding: 25px;
   background-color: ${theme.colors.white};
   user-select: none;
-  cursor: grab;
 
   ${TitleH3} {
     margin-top: 16px;

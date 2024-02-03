@@ -10,7 +10,7 @@ export const MobileCv: React.FC = () => {
     return (
         <S.MobileCv isOpen={CvIsOpen}>
 
-            <S.CvPopup isOpen={CvIsOpen} onClick={() => {setSvIsOpen(false)}}>
+            <S.CvPopup isOpen={CvIsOpen}  onClick={() => {setSvIsOpen(false)}}>
                 <AsideCv/>
             </S.CvPopup>
 

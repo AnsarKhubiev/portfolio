@@ -3,22 +3,20 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {theme} from "../../../styles/theme";
 import {font} from "../../../styles/Common";
-import {Container} from "../../../components/Container";
 
 
 const Contacts = styled.section`
   position: relative;
-
-  ${Container} {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px 30px;
 `
+
 const FormWrap = styled.div`
   flex: 1 1 345px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 `
 
 const FormTitle = styled(SectionTitle)`
@@ -30,6 +28,8 @@ const InfoCardsBlock = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
   flex: 1 1 345px;
 `
 
@@ -38,7 +38,6 @@ const CardsWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 18px;
 `
 
 const Form = styled.form`
@@ -107,11 +106,11 @@ export const S = {
     Contacts,
     FormWrap,
     FormTitle,
-    InfoCardsBlock,
-    CardsWrap,
     Form,
     SendBtn,
+    InfoCardsBlock,
     ContactInfoCard,
+    CardsWrap,
     IconBg,
     ContactValue,
     ContactLabel

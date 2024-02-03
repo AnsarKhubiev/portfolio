@@ -11,8 +11,10 @@ const AsideCv = styled.aside`
   position: relative;
   grid-area: cv;
   height: max-content;
-  width: 304px;
+  max-width: 304px;
+  width: 100%;
   background-color: ${theme.colors.white};
+
 
   ${Button} {
     width: 100%;
@@ -24,12 +26,16 @@ const AsideCv = styled.aside`
     :hover {
       color: ${theme.colors.white};
 
-      svg {
+      &svg {
         fill: ${theme.colors.white};
       }
-    };
+    }
   }
-;;
+  
+  @media ${theme.media.middle} {
+    max-width: 500px;
+    //margin: 0 30px;
+  }
 `
 
 // ---------CvContainer--------------
@@ -229,7 +235,7 @@ const Link = styled.a`
     transition: ${theme.animations.transition};
   }
 
-  :hover {
+  &:hover {
     transform: scale(1.3);
 
     svg {

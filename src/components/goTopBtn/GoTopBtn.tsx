@@ -47,7 +47,7 @@ const StyledGoTopBtn = styled.button`
   height: 40px;
   border-radius: 20px;
   position: fixed;
-  bottom: 96px;
+  bottom: 50px;
   right: 22px;
   
   :hover {

@@ -70,7 +70,7 @@ const MainBtn = styled(Button)`
   :hover {
     color: ${theme.colors.white};
 
-    svg {
+    &svg {
       fill: ${theme.colors.white}
     }
   }

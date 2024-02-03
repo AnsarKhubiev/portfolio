@@ -25,7 +25,6 @@ type PriceCardPropsType = {
 
 const PriceCard = styled.div<PriceCardPropsType>`
   user-select: none;
-  cursor: grab;
   background-color: ${theme.colors.white};
   box-shadow: ${props => props.plan.popular ? '0 0 10px 0 rgba(0, 0, 0, 0.15)' : 'none'};
   padding: 50px 34px 25px;
